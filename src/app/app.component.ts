@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ElementConfig, ElementTypes } from './dynamic/element';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'dynamic';
+  
+  elements: ElementConfig[] = [{
+    type: ElementTypes.Header,
+    settings: "Header Settings"
+  }, {
+    type: ElementTypes.Slider,
+    settings: "Slider Settings"
+  }, {
+    type: ElementTypes.Banner,
+    settings: "Banner Settings"
+  }, {
+    type: ElementTypes.Footer,
+    settings: "Footer Settings"
+  }];
 }
